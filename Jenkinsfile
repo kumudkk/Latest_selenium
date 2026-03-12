@@ -3,8 +3,12 @@ pipeline {
 
 environment {
 GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no' // Skip host key checking   
-maven ='Maven'
+
 }
+    tools {
+        maven 'Maven' // Refers to the name of a Maven installation configured in Jenkins "Global Tool Configuration"
+        jdk 'jdk'      // Refers to the name of a JDK installation configured in "Global Tool Configuration"
+    }
     stages {
         stage('clone') {
             steps {
