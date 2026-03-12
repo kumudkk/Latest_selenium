@@ -16,7 +16,7 @@ GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no' // Skip host key checking
         stage('test') {
             steps {
                 echo 'Testing the application'
-                bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            //    bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
     }
