@@ -6,9 +6,10 @@ pipeline {
                 echo 'Building the application'
             }
         }
-          stage('Build') {
+          stage('test') {
             steps {
                 echo 'Testing the application'
+                mvn test
             }
         }
         stage('deploy') {
