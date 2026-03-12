@@ -3,7 +3,7 @@ pipeline {
 
 environment {
 PATH="C:/maven/apache-maven-3.9.13/bin:$PATH"
-    
+GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no' // Skip host key checking    
 }
     stages {
         stage('git clone') {
