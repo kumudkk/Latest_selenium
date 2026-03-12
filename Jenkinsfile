@@ -3,7 +3,7 @@ pipeline {
 
 environment {
 GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no' // Skip host key checking   
-maven "MAVEN_HOME"
+maven "Maven"
 }
     stages {
         stage('clone') {
