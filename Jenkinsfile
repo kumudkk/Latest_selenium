@@ -5,9 +5,9 @@ environment {
 PATH="C:/maven/apache-maven-3.9.13/bin:$PATH"
 }
     stages {
-        stage('build') {
+        stage('git clone') {
             steps {
-                echo 'Building the application'
+                git credentialsid:'kumudkk (selenium_ssh)', url:'git@github.com:kumudkk/Latest_selenium.git'
             }
         }
           stage('test') {
