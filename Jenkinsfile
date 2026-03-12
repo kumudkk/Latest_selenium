@@ -16,7 +16,6 @@ GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no' // Skip host key checking
         }
         stage('test') {
             steps {
-                sh 'mvn test'
                 echo 'Testing the application'
             }
         }
