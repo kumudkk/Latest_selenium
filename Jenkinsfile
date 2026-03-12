@@ -1,10 +1,9 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven 3.x' 
-        jdk 'JDK 22'
-    }
+environment {
+PATH="C:\maven\apache-maven-3.9.13\bin:$PATH"
+}
     stages {
         stage('build') {
             steps {
@@ -14,7 +13,7 @@ pipeline {
           stage('test') {
             steps {
                 echo 'Testing the application'
-                sh 'mvn test'
+                sh "mvn test"
             }
         }
         stage('deploy') {
